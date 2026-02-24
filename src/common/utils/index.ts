@@ -8,7 +8,7 @@ export const delay = (ms: number): Promise<void> => {
 
 export const retry = async <T>(
   fn: () => Promise<T>,
-  maxRetries: number = 3
+  maxRetries: number = 3,
 ): Promise<T> => {
   for (let i = 0; i < maxRetries; i++) {
     try {
